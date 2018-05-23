@@ -49,8 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log(contact)
 
+    let contacts = JSON.parse(storage.getItem('contacts')) || []
+
+    contacts.push(contact)
+
     // 2. Save them to our storage
-    storage.setItem('contacts', JSON.stringify([contact]))
+    storage.setItem('contacts', JSON.stringify(contacts))
     renderContacts()
+    contactForm.reset()
   })
 })
