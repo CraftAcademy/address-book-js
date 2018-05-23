@@ -15,9 +15,18 @@ const renderContacts = () => {
       let li = document.createElement('li')
 
       li.innerHTML = `
-        <span>${contact.name}</span> |
-        <span>${contact.email}</span> |
-        <span>${contact.phone}</span>
+        <div class="card">
+          <div class="image">
+            <img src="https://ca-address-book.herokuapp.com/images/pine.jpg" />
+          </div>
+          <div class="content">
+            <h1>${ contact.name}</h1>
+            <h2>${ contact.company}</h2>
+            <p>${ contact.notes}</p>
+            ${ contact.email} |
+            <a href="http://www.twitter.com/${ contact.twitter}">@${contact.twitter}</a>
+          </div>
+        </div>
       `
       ul.appendChild(li)
     })
@@ -29,8 +38,12 @@ const renderContacts = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('loaded')
   renderContacts()
   const contactForm = document.querySelector('.new-contact-form')
+  const addContactBtn = document.querySelector('.add-contact')
+  const cancelBtn = document.querySelector('.cancel')
+  const contactList = document.querySelector('.contact-list')
 
   contactForm.addEventListener('submit', event => {
     event.preventDefault()
@@ -57,5 +70,18 @@ document.addEventListener('DOMContentLoaded', () => {
     storage.setItem('contacts', JSON.stringify(contacts))
     renderContacts()
     contactForm.reset()
+    contactList.classList.remove('hide')
+    contactForm.classList.add('hide')
+  })
+
+  // addContactBtn.addEventListener('click', () => console.log('clicked'))
+  addContactBtn.addEventListener('click', () => {
+    contactList.classList.add('hide')
+    contactForm.classList.remove('hide')
+  })
+
+  cancelBtn.addEventListener('click', () => {
+    contactList.classList.remove('hide')
+    contactForm.classList.add('hide')
   })
 })
