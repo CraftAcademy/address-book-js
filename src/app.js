@@ -70,11 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     storage.setItem('contacts', JSON.stringify(contacts))
     renderContacts()
     contactForm.reset()
+
+    // Hide Contact form
     contactList.classList.remove('hide')
     contactForm.classList.add('hide')
   })
 
-  // addContactBtn.addEventListener('click', () => console.log('clicked'))
   addContactBtn.addEventListener('click', () => {
     contactList.classList.add('hide')
     contactForm.classList.remove('hide')

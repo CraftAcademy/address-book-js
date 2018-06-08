@@ -1,7 +1,7 @@
 Feature: Create contacts
-As a user
-In order to stay in touch with my friends
-I would like to be able to create a contact for them in my address book
+  As a user
+  In order to stay in touch with my friends
+  I would like to be able to create a contact for them in my address book
 
 
   Scenario: Create a new contact
@@ -32,6 +32,7 @@ I would like to be able to create a contact for them in my address book
     And I fill in "Notes" with "A really awsome guy :-)"
     And I fill in "Twitter" with "johndoe"
     And I click "Save contact"
+    When I click "Add contact"
     Then I fill in "Name" with "Jane Doe"
     And I fill in "Email" with "jane@doe.com"
     And I fill in "Phone" with "01111111111"
