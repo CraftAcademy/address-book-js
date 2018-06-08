@@ -1,9 +1,9 @@
 {
   "name": "address-book",
   "version": "1.0.0",
-  "description": "Address book application",
+  "description": "Address book application - Week 2 Craft Academy Bootcamp",
   "main": "index.js",
-  "author": "Raoul DIFFOUO <diraulo@gmail.com>",
+  "author": "Raoul DIFFOUO <diraulo@craftacademy.se>",
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^7.1.4",
