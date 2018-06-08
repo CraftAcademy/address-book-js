@@ -4,7 +4,7 @@ Week 2 Project for [Craft Academy Bootcamp](https://craftacademy.co)
 
 ## Stack
 
-- Vanilla js (ES205+)
+- Vanilla js (ES2015+)
 - [Cucumberjs](https://github.com/cucumber/cucumber-js)
 - [Puppeteer](https://pptr.dev/) - Headless Chrome Node API
 - [Tailwind CSS](https://tailwindcss.com/)
